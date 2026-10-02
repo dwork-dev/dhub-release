@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tải bộ cài DHub</title>
+<!--
+  TRANG TẢI BỘ CÀI DHUB — công khai, KHÔNG đăng nhập, KHÔNG token (R-DHUB-17 — mã cũ R-DHUB-06e bản 16/08; phiếu
+  `DW-test/DCI-02.00.00/phieu-giao-dev-dhub-2026-09-06.md` mục D6).
+
+  Vì sao có trang này thay vì chỉ đưa liên kết thẳng tới tệp: tên tệp mang PHIÊN BẢN
+  (`dwork-dhub-0.1.0-macos.tar.gz`) nên nó đổi mỗi lần phát hành, trong khi thẻ việc gửi cho người
+  được giao thì nằm lại trong hòm việc rất lâu. Địa chỉ THƯ MỤC `/dci/dhub/` không đổi ⇒ thẻ việc
+  cũ vẫn tải được bản mới. Trang tự đọc `manifest.json` nên không có số phiên bản nào viết cứng ở
+  đây (viết cứng thì phát hành bản mới xong trang vẫn khoe số cũ mà không có gì đỏ).
+
+  🆕 02/10: trang này phát trên GitHub Pages (repo CÔNG KHAI `dwork-dev/dhub-release`, Hà duyệt luồng cập nhật 02/10).
+  Nguồn duy nhất: `dhub/phat-hanh/index.html` trong repo dwork; đẩy lên bằng `dhub/scripts/phat-hanh.sh` — đừng sửa thẳng trên repo công khai.
+  Gói nằm ở GitHub Releases, `manifest.json` mang `url` tuyệt đối tới từng gói.
+-->
+<style>
+  :root { color-scheme: light; }
+  body { margin:0; background:#F5F6F8; color:#1F1F1F;
+         font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .sub { color:#6D6B77; margin-bottom:24px; }
+  .card { background:#fff; border:1px solid #E4E5E9; border-radius:12px; padding:20px; margin-bottom:16px; }
+  .row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .row + .row { margin-top:12px; }
+  .ten { font-weight:600; }
+  .meta { color:#82808B; font-size:13px; }
+  a.tai { display:inline-block; background:#2F81F7; color:#fff; text-decoration:none;
+          padding:9px 16px; border-radius:8px; font-weight:600; }
+  a.tai:hover { background:#1F6FE0; }
+  ol { padding-left:20px; }
+  li { margin-bottom:6px; }
+  .canh { background:#FFF6E5; border:1px solid #E7C26B; border-radius:10px; padding:12px 14px;
+          font-size:14px; }
+  .loi { background:#FDECEA; border:1px solid #EA4335; color:#B3261E; border-radius:10px;
+         padding:12px 14px; }
+  code { background:#F0F1F4; padding:2px 6px; border-radius:5px; font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tải bộ cài DHub</h1>
+  <div class="sub">Phần mềm chạy nền trên một máy tính đặt <b>cùng mạng nội bộ</b> với máy chấm công.
+    Không cần cài Python hay bất cứ thứ gì khác.</div>
+
+  <div class="card" id="khoi-goi">
+    <div class="meta" id="dang-tai">Đang lấy thông tin bộ cài…</div>
+  </div>
+
+  <div class="card">
+    <b>Sau khi tải về</b>
+    <ol>
+      <li>Giải nén ra máy đặt tại nơi có máy chấm công.</li>
+      <li>Windows: bấm đúp <code>chay.bat</code> · macOS/Linux: chạy <code>./chay.sh</code></li>
+      <li>Mở <code>http://127.0.0.1:8765/</code> trên <b>chính máy đó</b>.</li>
+      <li>Nhập địa chỉ DWork quản trị viên đưa rồi bấm <b>Lưu</b> — màn hình hiện một <b>mã QR</b>.</li>
+      <li>Mở app DWork trên điện thoại, kiểm tra đúng tổ chức rồi <b>quét mã</b>. Xong.</li>
+    </ol>
+    <div class="meta">Bạn không phải đăng nhập và không phải nhập mã nào trên máy đó.</div>
+  </div>
+
+  <div class="card canh" id="canh-ky-so" hidden>
+    ⚠ Bộ cài <b>chưa được ký số</b>: lần đầu chạy, Windows/macOS sẽ hiện cảnh báo.
+    Cách bỏ qua nằm trong tệp <code>HUONG-DAN-CAI-DAT.txt</code> đi kèm trong gói.
+  </div>
+
+  <div class="meta">Một bộ cài dùng chung cho mọi máy — máy thuộc kết nối nào là do mã QR lúc quét
+    quyết định. Thêm kết nối mới không phải tải lại.</div>
+</main>
+
+<script>
+// Không viết cứng tên tệp/phiên bản: đọc từ manifest do `dhub/scripts/dong-goi.sh` sinh cùng mẻ
+// với các gói. Hỏng thì NÓI HỎNG — không dựng đường tải đoán mò (bấm ra 404 còn tệ hơn không nút).
+const doDoc = (n) => {
+  const v = Number(n);
+  if (!Number.isFinite(v) || v <= 0) return "";
+  return v >= 1048576 ? (v / 1048576).toFixed(1) + " MB" : Math.round(v / 1024) + " KB";
+};
+const ngayVn = (s) => {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || ""));
+  return m ? m[3] + "/" + m[2] + "/" + m[1] : String(s || "");
+};
+fetch("manifest.json", { cache: "no-store" })
+  .then((r) => (r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status))))
+  .then((m) => {
+    if (!m || !Array.isArray(m.goi) || !m.goi.length) throw new Error("manifest không có gói nào");
+    const khoi = document.getElementById("khoi-goi");
+    khoi.innerHTML = "";
+    const dau = document.createElement("div");
+    dau.className = "meta";
+    dau.textContent = "DHub " + (m.phien_ban || "") + " · phát hành " + ngayVn(m.ngay_phat_hanh);
+    khoi.appendChild(dau);
+    for (const g of m.goi) {
+      const d = document.createElement("div");
+      d.className = "row";
+      const t = document.createElement("div");
+      t.style.flex = "1";
+      const ten = document.createElement("div");
+      ten.className = "ten";
+      ten.textContent = g.ten_hien_thi || g.he_dieu_hanh;
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      meta.textContent = doDoc(g.kich_thuoc);
+      t.appendChild(ten); t.appendChild(meta);
+      const a = document.createElement("a");
+      a.className = "tai";
+      a.href = g.url || g.ten_tep;
+      a.rel = "noopener";
+      a.textContent = "Tải xuống";
+      d.appendChild(t); d.appendChild(a);
+      khoi.appendChild(d);
+    }
+    if (m.da_ky_so === false) document.getElementById("canh-ky-so").hidden = false;
+  })
+  .catch((e) => {
+    const khoi = document.getElementById("khoi-goi");
+    khoi.className = "card loi";
+    khoi.textContent = "Chưa lấy được thông tin bộ cài (" + (e && e.message ? e.message : "lỗi không rõ")
+      + "). Hãy báo quản trị hệ thống — đừng tải bộ cài từ nguồn khác.";
+  });
+</script>
+</body>
+</html>
