@@ -1,0 +1,17 @@
+{
+  "da_ky_so": false,
+  "dang": "dong-bang",
+  "goi": [
+    {
+      "he_dieu_hanh": "macos",
+      "kich_thuoc": 8397245,
+      "sha256": "62b9096322ea94f7344a1ca4b760c014570600f736412beb1ba253b391e55a24",
+      "ten_hien_thi": "macOS (Apple Silicon)",
+      "ten_tep": "dwork-dhub-0.2.1-macos.tar.gz",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.1/dwork-dhub-0.2.1-macos.tar.gz"
+    }
+  ],
+  "ngay_phat_hanh": "2026-10-02",
+  "phien_ban": "0.2.1",
+  "kho": "dwork-dev/dhub-release"
+}
