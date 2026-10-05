@@ -53,11 +53,16 @@
   </div>
 
   <div class="card">
-    <b>Sau khi tải về</b>
+    <b>Sau khi tải về</b> — trên máy đặt tại nơi có máy chấm công
     <ol>
-      <li>Giải nén ra máy đặt tại nơi có máy chấm công.</li>
-      <li>Windows: bấm đúp <code>chay.bat</code> · macOS/Linux: chạy <code>./chay.sh</code></li>
-      <li>Mở <code>http://127.0.0.1:8765/</code> trên <b>chính máy đó</b>.</li>
+      <li><b>macOS (tệp .pkg):</b> bấm đúp tệp vừa tải, làm theo trình cài đặt (máy hỏi mật khẩu quản trị
+        một lần). DHub thành <b>dịch vụ chạy nền từ lúc bật máy</b> và tự mở cửa sổ; sau này mở lại bằng
+        ứng dụng <b>DHub</b> trong thư mục Ứng dụng.<br>
+        <b>Linux (tệp .deb — Debian/Ubuntu):</b> <code>sudo apt install ./&lt;tên tệp&gt;.deb</code>.
+        DHub thành dịch vụ chạy nền từ lúc bật máy; lệnh cài in ra địa chỉ cửa sổ
+        (thường <code>http://127.0.0.1:8765/</code>), mở trên chính máy đó.<br>
+        <b>Windows (tệp .zip):</b> giải nén, bấm đúp <code>chay.bat</code> rồi mở
+        <code>http://127.0.0.1:8765/</code> trên chính máy đó.</li>
       <li>Nhập địa chỉ DWork quản trị viên đưa rồi bấm <b>Lưu</b> — màn hình hiện một <b>mã QR</b>.</li>
       <li>Mở app DWork trên điện thoại, kiểm tra đúng tổ chức rồi <b>quét mã</b>. Xong.</li>
     </ol>
@@ -65,8 +70,10 @@
   </div>
 
   <div class="card canh" id="canh-ky-so" hidden>
-    ⚠ Bộ cài <b>chưa được ký số</b>: lần đầu chạy, Windows/macOS sẽ hiện cảnh báo.
-    Cách bỏ qua nằm trong tệp <code>HUONG-DAN-CAI-DAT.txt</code> đi kèm trong gói.
+    ⚠ Bộ cài <b>chưa được ký số</b>: lần đầu mở, Windows/macOS sẽ hiện cảnh báo.
+    macOS: nếu báo không mở được tệp .pkg, vào <b>Cài đặt hệ thống › Quyền riêng tư &amp; Bảo mật</b>,
+    bấm <b>Vẫn mở</b> rồi mở lại tệp. Windows: «Windows protected your PC» → <b>More info</b> →
+    <b>Run anyway</b> (chi tiết trong <code>HUONG-DAN-CAI-DAT.txt</code> đi kèm gói).
   </div>
 
   <div class="meta">Một bộ cài dùng chung cho mọi máy — máy thuộc kết nối nào là do mã QR lúc quét
