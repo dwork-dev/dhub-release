@@ -3,15 +3,43 @@
   "dang": "dong-bang",
   "goi": [
     {
+      "cach_cai": "giai-nen",
+      "he_dieu_hanh": "windows",
+      "kich_thuoc": 15732109,
+      "sha256": "6c9c4624f941cdcc57b1f9bac2c3b797bfb9b27e1fed1d5fcbf1edfa67ba9b81",
+      "ten_hien_thi": "Windows 10/11 (64-bit)",
+      "ten_tep": "dwork-dhub-0.2.3-windows.zip",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.3/dwork-dhub-0.2.3-windows.zip"
+    },
+    {
+      "cach_cai": "bo-cai",
       "he_dieu_hanh": "macos",
-      "kich_thuoc": 8397245,
-      "sha256": "62b9096322ea94f7344a1ca4b760c014570600f736412beb1ba253b391e55a24",
+      "kich_thuoc": 32493578,
+      "sha256": "ac86eeb72c94288a0a3aa22ff0885cb718c8bf02aa5ff8cb1de39516061e1b29",
       "ten_hien_thi": "macOS (Apple Silicon)",
-      "ten_tep": "dwork-dhub-0.2.1-macos.tar.gz",
-      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.1/dwork-dhub-0.2.1-macos.tar.gz"
+      "ten_tep": "dwork-dhub-0.2.3-macos.pkg",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.3/dwork-dhub-0.2.3-macos.pkg"
+    },
+    {
+      "cach_cai": "bo-cai",
+      "he_dieu_hanh": "linux",
+      "kich_thuoc": 38496926,
+      "sha256": "1ab109bdbaf5ae3deaa098ffcb547501554918707309fdf44be57ccfc6d6934c",
+      "ten_hien_thi": "Linux 64-bit (x86_64, .deb)",
+      "ten_tep": "dwork-dhub-0.2.3-linux.deb",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.3/dwork-dhub-0.2.3-linux.deb"
+    },
+    {
+      "cach_cai": "bo-cai",
+      "he_dieu_hanh": "linux-arm64",
+      "kich_thuoc": 33569714,
+      "sha256": "abea7cda5e6ca2964ccc414ff3b9072edc88c02446819fa877c13b90104947be",
+      "ten_hien_thi": "Linux ARM 64-bit (.deb)",
+      "ten_tep": "dwork-dhub-0.2.3-linux-arm64.deb",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.3/dwork-dhub-0.2.3-linux-arm64.deb"
     }
   ],
-  "ngay_phat_hanh": "2026-10-02",
-  "phien_ban": "0.2.1",
+  "ngay_phat_hanh": "2026-10-05",
+  "phien_ban": "0.2.3",
   "kho": "dwork-dev/dhub-release"
 }
