@@ -5,41 +5,41 @@
     {
       "cach_cai": "giai-nen",
       "he_dieu_hanh": "windows",
-      "kich_thuoc": 15747719,
-      "sha256": "cbed9c356baf2125c267cc41fbd3861479f7fdb4a5d239b00a97cbc14cffb413",
+      "kich_thuoc": 15748758,
+      "sha256": "4c28993db21055015699a8fc870610077b7b4853f3925dcc537b9b4ad174ed39",
       "ten_hien_thi": "Windows 10/11 (64-bit)",
-      "ten_tep": "dwork-dhub-0.2.10-windows.zip",
-      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.10/dwork-dhub-0.2.10-windows.zip"
+      "ten_tep": "dwork-dhub-0.2.11-windows.zip",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.11/dwork-dhub-0.2.11-windows.zip"
     },
     {
       "cach_cai": "bo-cai",
       "he_dieu_hanh": "macos",
-      "kich_thuoc": 32527998,
-      "sha256": "0ea93ee4be0a95b60c3ac199dfd5eab7c1db77ab8adbe0afc7833e35019129f3",
+      "kich_thuoc": 32527916,
+      "sha256": "3447f965482e411a45ecdb80c759587c18bf2e8e8c91c3b736179cfe587e2e4f",
       "ten_hien_thi": "macOS (Apple Silicon)",
-      "ten_tep": "dwork-dhub-0.2.10-macos.pkg",
-      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.10/dwork-dhub-0.2.10-macos.pkg"
+      "ten_tep": "dwork-dhub-0.2.11-macos.pkg",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.11/dwork-dhub-0.2.11-macos.pkg"
     },
     {
       "cach_cai": "bo-cai",
       "he_dieu_hanh": "linux",
-      "kich_thuoc": 38510242,
-      "sha256": "8e12a886b0921cfd6f1f4f3c8f47d24f420a2920752c1fc5c6818656a62809a0",
+      "kich_thuoc": 38510524,
+      "sha256": "99f0742a51bae5e9afeedb6c6f758f0b213a5eeef20c1c575d6ce770bca952e2",
       "ten_hien_thi": "Linux 64-bit (x86_64, .deb)",
-      "ten_tep": "dwork-dhub-0.2.10-linux.deb",
-      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.10/dwork-dhub-0.2.10-linux.deb"
+      "ten_tep": "dwork-dhub-0.2.11-linux.deb",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.11/dwork-dhub-0.2.11-linux.deb"
     },
     {
       "cach_cai": "bo-cai",
       "he_dieu_hanh": "linux-arm64",
-      "kich_thuoc": 33583076,
-      "sha256": "356d5d4744fbfd9a207e992104039e6a85e1d62ecb349a60897fd32493782d8b",
+      "kich_thuoc": 33583058,
+      "sha256": "3bd878101fa1ed6a019294470ef63e52006db8457e82d80164a417780c83feee",
       "ten_hien_thi": "Linux ARM 64-bit (.deb)",
-      "ten_tep": "dwork-dhub-0.2.10-linux-arm64.deb",
-      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.10/dwork-dhub-0.2.10-linux-arm64.deb"
+      "ten_tep": "dwork-dhub-0.2.11-linux-arm64.deb",
+      "url": "https://github.com/dwork-dev/dhub-release/releases/download/v0.2.11/dwork-dhub-0.2.11-linux-arm64.deb"
     }
   ],
   "ngay_phat_hanh": "2026-10-10",
-  "phien_ban": "0.2.10",
+  "phien_ban": "0.2.11",
   "kho": "dwork-dev/dhub-release"
 }
