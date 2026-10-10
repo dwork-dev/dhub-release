@@ -46,10 +46,17 @@
 <main>
   <h1>Tải bộ cài DHub</h1>
   <div class="sub">Phần mềm chạy nền trên một máy tính đặt <b>cùng mạng nội bộ</b> với máy chấm công.
+    Máy này cần <b>bật thường trực</b> và ra được Internet.
     Không cần cài Python hay bất cứ thứ gì khác.</div>
 
   <div class="card" id="khoi-goi">
     <div class="meta" id="dang-tai">Đang lấy thông tin bộ cài…</div>
+  </div>
+
+  <!-- R-DHUB-14b (BA 09/10, DW-phieu tra-loi-de-xuat-2026-10-04-dhub-…): the customer must be told BEFORE
+       installing that DHub replaces the device's whole person list. Sentence is BA's, verbatim — do not reword. -->
+  <div class="card canh" id="canh-thay-danh-sach">
+    ⚠ DHub sẽ thay toàn bộ danh sách người trên máy chấm công bằng danh sách do DWork giao — người được khai trực tiếp trên máy sẽ bị gỡ.
   </div>
 
   <div class="card">
@@ -64,10 +71,13 @@
         <b>Windows (tệp .zip):</b> giải nén, bấm đúp <code>cai-dat.bat</code> (Windows hỏi quyền quản trị
         một lần). DHub thành dịch vụ chạy nền từ lúc bật máy và tự mở cửa sổ; nếu không, mở
         <code>http://127.0.0.1:8765/</code> trên chính máy đó.</li>
-      <li>Nhập địa chỉ DWork quản trị viên đưa rồi bấm <b>Lưu</b> — màn hình hiện một <b>mã QR</b>.</li>
+      <li>Màn hình hiện ngay một <b>mã QR</b> — địa chỉ DWork đã đặt sẵn, không phải nhập gì. (Chỉ khi
+        quản trị viên đưa địa chỉ DWork khác: sửa ở khối «Kết nối DWork» rồi bấm <b>Lưu</b>.)</li>
       <li>Mở app DWork trên điện thoại, kiểm tra đúng tổ chức rồi <b>quét mã</b>. Xong.</li>
     </ol>
     <div class="meta">Bạn không phải đăng nhập và không phải nhập mã nào trên máy đó.</div>
+    <div class="meta" id="khuyen-day-mang">Khuyến nghị: máy đặt DHub nên <b>cắm dây mạng</b>. Wi-Fi chập chờn làm
+      DHub mất liên lạc với máy chấm công từng lúc — không mất lượt chấm, nhưng lượt lên DWork chậm hơn.</div>
   </div>
 
   <div class="card canh" id="canh-ky-so" hidden>
